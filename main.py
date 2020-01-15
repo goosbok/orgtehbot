@@ -1,14 +1,12 @@
 # coding: utf8
 from telegram.ext import Updater
 from telegram.ext import MessageHandler, CallbackQueryHandler, CommandHandler, Filters
-from telegram import Message
-from telegram import InlineKeyboardMarkup, InlineKeyboardButton
-from telegram import KeyboardButton, ReplyKeyboardMarkup, ReplyKeyboardRemove
-from telegram import File
+# from telegram import InlineKeyboardMarkup, InlineKeyboardButton
+# from telegram import KeyboardButton, ReplyKeyboardMarkup, ReplyKeyboardRemove
+# from telegram import File
 import logging
-import time
-import os
-from last_mes import last_mes
+# import time
+# import os
 
 token = '1038469498:AAGeQ16BovO3kVyr2PRUnVaruxDtFzzNVVY'
 request_kwargs = {
@@ -40,7 +38,7 @@ def message_handler(bot, update):
     text = message.text
     chat_id = message.chat_id
     message_id = message.message_id
-    print(message)
+#     print(message)
     if chat_id != admins_group_chat_id:
         bot.forward_message(chat_id=admins_group_chat_id,
                             from_chat_id=chat_id,
@@ -90,8 +88,8 @@ def otvet2():
 def otvet3():
     return 'Я передала Ваш вопрос администрации Оргтехника Плюс! Очень скоро Вы получите ответ!'
 #############  handler  #############
-updater = Updater(token=token,
-                  request_kwargs=request_kwargs)
+updater = Updater(token=token)#,
+                  #request_kwargs=request_kwargs)
 updater.dispatcher.add_handler(CommandHandler('start', start))
 updater.dispatcher.add_handler(CallbackQueryHandler(callback_handler))
 updater.dispatcher.add_handler(MessageHandler(Filters.text, message_handler))
