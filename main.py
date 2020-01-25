@@ -1,8 +1,8 @@
 # coding: utf8
 from telegram.ext import Updater
 from telegram.ext import MessageHandler, CallbackQueryHandler, CommandHandler, Filters
-# from telegram import InlineKeyboardMarkup, InlineKeyboardButton
-# from telegram import KeyboardButton, ReplyKeyboardMarkup, ReplyKeyboardRemove
+from telegram import InlineKeyboardMarkup, InlineKeyboardButton
+from telegram import KeyboardButton, ReplyKeyboardMarkup, ReplyKeyboardRemove
 # from telegram import File
 import logging
 # import time
