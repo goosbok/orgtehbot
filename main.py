@@ -47,7 +47,7 @@ def message_handler(bot, update, group=None):
         return
     if chat_id != chats['admins_group_chat_id']:
         bot.send_message(chat_id=chats['admins_group_chat_id'],
-                         text=group())
+                         text=group)
         bot.forward_message(chat_id=chats['admins_group_chat_id'],
                             from_chat_id=chat_id,
                             message_id=message_id,
